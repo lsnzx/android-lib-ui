@@ -41,7 +41,7 @@ afterEvaluate {
             create<MavenPublication>("maven") {
                 groupId = "com.lsn.lib"
                 artifactId = "ui"
-                version = "0.0.9"
+                version = "1.0.0"
 //                from(components["java"])
                 afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
             }
@@ -65,5 +65,6 @@ dependencies {
     api(libs.androidx.constraintlayout.constraintlayout)
     api(libs.androidx.recyclerview.recyclerview)
     api(libs.jetbrains.kotlin.reflect)
+    api("com.github.lsnzx:android-lib-res:1.0.0")
     api(libs.github.inflationx.viewpump)
 }
